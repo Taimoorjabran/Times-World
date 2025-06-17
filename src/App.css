@@ -1,0 +1,255 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  color: #3D3D3D;
+}
+
+.login-container .col-md-6 {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.text-custom-blue {
+  color: #587FFF;
+}
+
+.custom-form-control {
+  border: 2px solid #3E3E3E;
+  border-radius: 0px;
+}
+
+.custom-form-control:focus {
+  border-color: #333;
+  box-shadow: 0 0 0 0.25rem rgba(88, 127, 255, 0.25);
+}
+
+.custom-form-control::placeholder {
+  color: 3D3D3D;
+  font-weight: 500;
+  opacity: 1;
+}
+
+.custom-checkbox {
+  user-select: none;
+}
+
+.custom-checkbox .form-check-input {
+  width: 28px;
+  height: 28px;
+  border-radius: 0;
+  border: 2px solid #3E3E3E;
+  background-color: #ede9e9;
+  margin: 0;
+  margin-top: 0 !important;
+  user-select: none;
+}
+
+.custom-checkbox .form-check-input:checked {
+  background-color: #3D3D3D;
+  border-color: #000;
+  background-size: 14px;
+  background-image: none !important;
+}
+
+.custom-checkbox .form-check-label {
+  line-height: 1;
+  cursor: pointer;
+}
+
+.form-check-label {
+  line-height: 1;
+  cursor: pointer;
+}
+
+.custom-check-container {
+  position: relative;
+}
+
+.check-box {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #3d3d3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+}
+
+.check-box.checked {
+  background-color: #3d3d3d;
+}
+
+.check-icon {
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  transform: translateY(-50%);
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.custom-button {
+  background-color: #000000 !important;
+  border: none;
+  border-radius: 0 !important;
+  color: white;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #333 !important;
+}
+
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #3E3E3E;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: white;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.icon-circle:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.tab {
+  color: #4f4d4d;
+  margin: 8px;
+}
+
+.active-nav {
+  color: #3D3D3D;
+  font-weight: 700;
+  background-color: #f0f0f0;
+}
+
+.nav-link {
+  color: #3D3D3D;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+  border-bottom: 1px solid #3E3E3E;
+}
+
+.custom-hr {
+  height: 3px;
+  background-color: #000000;
+  border: none;
+  margin: 0;
+}
+
+.carousel-card {
+  height: 480px;
+  border: 2px solid #3E3E3E;
+}
+
+.country-card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border: 2px solid #3E3E3E;
+  background: #fff;
+  box-shadow: 6px 6px 2px #d4d4d4 !important; 
+  border-radius: 0px;
+}
+
+.country-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.country-flag {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.375rem 0 0 0.375rem;
+  display: block;
+  padding: 1rem;
+}
+
+.country-card,
+.country-flag {
+  will-change: transform;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.carousel-overlay-controls {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 30px;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 10;
+}
+
+.arrow {
+  cursor: pointer;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #000;
+}
+
+@media (max-width: 576px) {
+  .h1-md {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .login-container {
+    min-width: 70vw;
+    max-width: 90vw;
+    justify-content: space-between !important;
+  }
+
+  .carousel-wrapper .col-md-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+  .carousel-wrapper .col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-card {
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .btn-group .btn {
+    font-size: 0.875rem;
+    padding: 0.375rem 0.75rem;
+  }
+}
