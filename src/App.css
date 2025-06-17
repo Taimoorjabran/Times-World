@@ -186,7 +186,7 @@ html {
   left: 50%;
   transform: translateX(-50%);
   border-radius: 30px;
-  padding: 6px 12px;
+  padding: 0px 12px;
   display: flex;
   align-items: center;
   gap: 12px;
