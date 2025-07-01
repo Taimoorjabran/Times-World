@@ -84,7 +84,7 @@ const Home: React.FC = () => {
             <Container fluid className="px-4 px-sm-3 py-3 py-md-4">
                 <Row>
                     <Col>
-                        <Header activeFilter={selectedRegion} onFilterChange={handleFilterChange} />
+                        <Header activeFilter={selectedRegion} onFilterChange={handleFilterChange} countries={countries} />
                         <div className="d-none d-md-flex align-items-center mb-5">
                             <div className="custom-hr flex-grow-1 mb-5" />
                             <h1 className="px-3 h1 fw-bold">Welcome</h1>

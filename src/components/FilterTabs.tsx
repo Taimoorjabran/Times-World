@@ -3,16 +3,15 @@ import React, { useState } from "react";
 import { Offcanvas, Nav } from "react-bootstrap";
 import { List } from "react-bootstrap-icons";
 
-const filterTabs = ['All', 'Asia', 'Europe'];
-
 interface FilterTabsProps {
     activeFilter: string;
     onFilterChange: (region: string) => void;
     availableRegions: string[];
+    handleLogout: () => void;
 }
 
 const FilterTabs = React.memo<FilterTabsProps>(
-    ({ activeFilter, onFilterChange, availableRegions }) => {
+    ({ activeFilter, onFilterChange, availableRegions, handleLogout }) => {
         const [showDrawer, setShowDrawer] = useState(false);
 
         const filters = [...availableRegions];
@@ -21,7 +20,7 @@ const FilterTabs = React.memo<FilterTabsProps>(
             <>
                 <div className="d-none d-md-flex justify-content-center mb-2">
                     <Nav variant="underline" activeKey={activeFilter}>
-                        {filterTabs.map((tab) => (
+                        {availableRegions.map((tab) => (
                             <Nav.Item key={tab}>
                                 <Nav.Link
                                     eventKey={tab}
@@ -57,6 +56,7 @@ const FilterTabs = React.memo<FilterTabsProps>(
                                 </Nav.Item>
                             ))}
                         </Nav>
+                        <button className="btn btn-primary mt-3 mb-1" onClick={handleLogout}>logout</button>
                     </Offcanvas.Body>
                 </Offcanvas>
             </>
